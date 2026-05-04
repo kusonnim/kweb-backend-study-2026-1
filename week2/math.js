@@ -1,3 +1,7 @@
+const express = require("express");
+
+const router = express.Router();
+
 app.get("/sum", (req, res) => {
     const a = req.query.a;
     const b = req.query.b;
@@ -9,3 +13,5 @@ app.get("/sub", (req, res) => {
     const b = req.query.b;
     res.send(`${a} + ${b} 는 ${Number(a)+Number(b)} 입니다!`);
 });
+
+module.exports = router;
